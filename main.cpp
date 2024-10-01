@@ -2,15 +2,17 @@
 #include<Windows.h>
 
 int Recursive(int n) {
+	
 	if (n <= 1) {
 		return (1);
 	}
-	return (n * Recursive(n - 1));
+
+	return (Recursive(n - 1) * 2 - 50);
 }
 
 int main(){
 
-	int n = 100;
+	int n =	5;
 	int result;
 
 	result = Recursive(n);
