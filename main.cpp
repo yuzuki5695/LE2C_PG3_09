@@ -7,7 +7,6 @@ int main(){
 	SetConsoleOutputCP(65001);
 
 	char str[] = "オムライス";
-
 	printf("%s", str);
 
 	return 0;
