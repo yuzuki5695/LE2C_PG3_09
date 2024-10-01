@@ -1,13 +1,20 @@
 #include<stdio.h>
 #include<Windows.h>
 
+int Recursive(int n) {
+	if (n <= 1) {
+		return (1);
+	}
+	return (n * Recursive(n - 1));
+}
+
 int main(){
 
-	/*---文字化けを防ぐ---*/
-	SetConsoleOutputCP(65001);
+	int n = 100;
+	int result;
 
-	char str[] = "オムライス";
-	printf("%s", str);
+	result = Recursive(n);
+	printf("%dの階乗 = %d\n",n,result);
 
-	return 0;
+	return (0);
 }
